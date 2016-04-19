@@ -1,0 +1,4 @@
+How will you measure bandwidth with reasonable accuracy? Set baud rate on both to 250000, maximum for Arduino serial. Have one Atmega128RFA1 board send integers in loop from 0 to n. 
+How will you determine whether a packet has been dropped? See how many of the numbers from 0 to n are detected on the receiving board.
+Do you think you can send data in both directions a quickly? No, because serial Rx/Tx lines transmit in a single direction at any one time.
+How do these measurement vary as the boards move farther apart? Our dropped packet percentage will increase as distance increases because of the Energy Above Threshold for received signals. As distance increases, the receivable signal energy decreases.
